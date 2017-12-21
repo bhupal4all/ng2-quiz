@@ -5,11 +5,14 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { FilterPipe } from './filter/FilterPipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuizComponent
+    QuizComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,8 @@
 <div class="row">
   <div class="col-md-6">
     <h3>Quiz Application</h3>
+    <h4>{{counter}}</h4>
+    <button>Enter Questions</button>
   </div>
   <div class="col-md-6 text-sm-right">
     Select Quiz:
@@ -14,9 +16,9 @@
   <hr />
 
   <div *ngIf="mode=='quiz' && quiz">
-    <div *ngFor="let question of filteredQuestions;">
-      <div class="badge badge-info">Question {{pager.index + 1}} of {{pager.count}}.</div>
-      <h2>{{pager.index + 1}}. <span [innerHTML]="question.name"></span></h2>
+    <div *ngFor="let question of filteredQuestions;let idx = index">
+      <div class="badge badge-info">Question {{pager.index + idx + 1}} of {{pager.count}}.</div>
+      <h3>{{pager.index + idx + 1}}. <span [innerHTML]="question.name"></span></h3>
       <div class="row text-left options">
         <div class="col-md-6" *ngFor="let option of question.options">
           <div class="option">
@@ -32,9 +34,9 @@
     <div class="text-sm-center">
       <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(0);">First</button>
       <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(pager.index - 1);">Prev</button>
-      <button class="btn btn-primary" (click)="goTo(pager.index + 1);">Next</button>
+      <button class="btn btn-primary" (click)="goTo(pager.index + pager.size);">Next</button>
       <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(pager.count - 1);">Last</button>
-      <!--<pagination *ngIf="config.showPager" direction-links="false" total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></pagination>-->
+      <!-- <pagination *ngIf="config.showPager" direction-links="false" total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></pagination> -->
     </div>
   </div>
 
@@ -50,10 +52,13 @@
         <h4>{{index + 1}}. {{question.name}}</h4>
         <div class="row">
           <div class="col-md-6" *ngFor="let Option of question.options">
-            <input id="{{Option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" /> {{Option.name}}
+            <input id="{{Option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" /> <span [ngClass]="{'text-success': Option.selected === Option.isAnswer, 'text-danger': Option.isAnswer && (Option === undefined || !Option.selected) }">{{Option.name}}</span>
           </div>
         </div>
-        <div class="alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{isCorrect(question)}}.</div>
+        <!-- <div class="alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{question.}}.</div> -->
+        <!-- <ul>
+          <li class='text-info' *ngFor="let option of question.options | filter:{isAnswer: true}">{{ option.name }}</li>
+        </ul> -->
       </div>
     </div>
     <h4 class="alert alert-info text-sm-center">You may close this window now.</h4>

@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs/Observable'
 
 import { QuizService } from '../services/quiz.service';
 import { HelperService } from '../services/helper.service';
 import { Option, Question, Quiz, QuizConfig } from '../models/index';
+import { FilterPipe } from '../filter/FilterPipe';
 
 @Component({
   selector: 'app-quiz',
@@ -29,6 +31,8 @@ export class QuizComponent implements OnInit {
     'showPager': true,
     'theme': 'none'
   };
+  countDown;
+  counter = 60;
 
   pager = {
     index: 0,
@@ -36,7 +40,9 @@ export class QuizComponent implements OnInit {
     count: 1
   };
 
-  constructor(private quizService: QuizService) { }
+  constructor(private quizService: QuizService) { 
+
+  }
 
   ngOnInit() {
     this.quizes = this.quizService.getAll();
@@ -48,7 +54,25 @@ export class QuizComponent implements OnInit {
     this.quizService.get(quizName).subscribe(res => {
       this.quiz = new Quiz(res);
       this.pager.count = this.quiz.questions.length;
+      this.config = this.quiz.config;
+
+      if (this.config.shuffleQuestions) {
+        var rand;
+        var tmp;
+        var len = this.pager.count;
+        var ret = this.quiz.questions.slice();
+      
+        while (len) {
+          rand = Math.floor(Math.random() * len--);
+          tmp = ret[len];
+          ret[len] = ret[rand];
+          ret[rand] = tmp;
+        }
+  
+        this.quiz.questions = ret;
+      }
     });
+
     this.mode = 'quiz';
   }
 
@@ -79,7 +103,15 @@ export class QuizComponent implements OnInit {
   };
 
   isCorrect(question: Question) {
-    return question.options.every(x => x.selected === x.isAnswer) ? 'correct' : 'wrong';
+    return question.options.forEach(x => x.selected === x.isAnswer && console.log(x) ? 'correct' : 'wrong');
+
+    /*let isCorrect = 'wrong';
+  	
+    question.options.forEach(op => { 
+      if (op.selected) op.isAnswer ? isCorrect = 'correct' : isCorrect = 'wrong'; 
+    });
+    return isCorrect;
+    */
   };
 
   onSubmit() {
