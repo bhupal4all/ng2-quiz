@@ -1,14 +1,12 @@
 <div class="row">
   <div class="col-md-6">
     <h3>Quiz Application</h3>
-    <h4>{{counter}}</h4>
-    <button>Enter Questions</button>
   </div>
   <div class="col-md-6 text-sm-right">
     Select Quiz:
     <select [(ngModel)]="quizName" (change)="loadQuiz(quizName)">
-        <option *ngFor="let quiz of quizes" [value]="quiz.id">{{quiz.name}}</option>
-      </select>
+      <option *ngFor="let quiz of quizes" [value]="quiz.id">{{quiz.name}}</option>
+    </select>
   </div>
 </div>
 <div id="quiz">
@@ -16,26 +14,47 @@
   <hr />
 
   <div *ngIf="mode=='quiz' && quiz">
-    <div *ngFor="let question of filteredQuestions;let idx = index">
+    <!-- <div *ngFor="let question of filteredQuestions;let idx = index" class='card card-body'>
       <div class="badge badge-info">Question {{pager.index + idx + 1}} of {{pager.count}}.</div>
-      <h3>{{pager.index + idx + 1}}. <span [innerHTML]="question.name"></span></h3>
-      <div class="row text-left options">
-        <div class="col-md-6" *ngFor="let option of question.options">
-          <div class="option">
-            <label class="" [attr.for]="option.id">
-                <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" />
-                {{option.name}}
+      <h5>
+        <span [innerHTML]="question.name"></span>
+      </h5>
+      <div class="row options">
+        <div class="col-md-12" *ngFor="let option of question.options">
+          <div class=''>
+            <label class="text-deafult" [attr.for]="option.id">
+              <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" />
+              <span [innerHTML]="option.name"></span>
             </label>
           </div>
         </div>
       </div>
+      <span class='text-info' [innerHTML]="question.hint"></span>
+    </div> -->
+    <div class="card" *ngFor="let question of filteredQuestions;let idx = index">
+      <div class="card-header bg-transparent">
+          <div class="badge badge-info">Question {{pager.index + idx + 1}} of {{pager.count}}.</div>
+          <h5>
+          <span [innerHTML]="question.name"></span>
+        </h5>
+      </div>
+      <ul class='list-group list-group-flush'>
+        <li class='list-group-item' *ngFor="let option of question.options">
+          <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" />
+          <label [attr.for]="option.id">
+            <span [innerHTML]="option.name"></span>
+          </label>
+        </li>
+      </ul>
+      <div class="footer">{{question.hint}}</div>
     </div>
+
     <hr />
     <div class="text-sm-center">
-      <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(0);">First</button>
-      <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(pager.index - 1);">Prev</button>
-      <button class="btn btn-primary" (click)="goTo(pager.index + pager.size);">Next</button>
-      <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(pager.count - 1);">Last</button>
+      <button class="btn btn-default btn-sm" *ngIf="config.allowBack" (click)="goTo(0);">First</button>
+      <button class="btn btn-default btn-sm" *ngIf="config.allowBack" (click)="goTo(pager.index - 1);">Prev</button>
+      <button class="btn btn-primary btn-sm" (click)="goTo(pager.index + pager.size);">Next</button>
+      <button class="btn btn-default btn-sm" *ngIf="config.allowBack" (click)="goTo(pager.count - 1);">Last</button>
       <!-- <pagination *ngIf="config.showPager" direction-links="false" total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></pagination> -->
     </div>
   </div>
@@ -49,11 +68,17 @@
     <h2>Quiz Result</h2>
     <div *ngFor="let question of quiz.questions; let index = index">
       <div class="result-question">
-        <h4>{{index + 1}}. {{question.name}}</h4>
+        <h5>{{index + 1}}.
+          <span [innerHTML]='question.name'></span>
+        </h5>
         <div class="row">
           <div class="col-md-6" *ngFor="let Option of question.options">
-            <input id="{{Option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" /> <span [ngClass]="{'text-success': Option.selected === Option.isAnswer, 'text-danger': Option.isAnswer && (Option === undefined || !Option.selected) }">{{Option.name}}</span>
+            <input id="{{Option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" />
+            <span [ngClass]="{'text-success': (Option.isAnswer && Option.selected === Option.isAnswer), 'text-danger': (Option.isAnswer && (Option === undefined || !Option.selected)) }" [innerHTML]='Option.name'></span>
           </div>
+        </div>
+        <div>
+          <span [innerHTML]="question.explanation"></span>
         </div>
         <!-- <div class="alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{question.}}.</div> -->
         <!-- <ul>
@@ -61,7 +86,9 @@
         </ul> -->
       </div>
     </div>
-    <h4 class="alert alert-info text-sm-center">You may close this window now.</h4>
+    <h4 class="alert alert-info text-sm-center">Your Score is {{quizCount}}, You may close this window now or
+      <button class='btn btn-sm btn-secondary' (click)="loadQuiz(quizName)">Retake</button>
+    </h4>
   </div>
   <hr />
   <div *ngIf="mode!='result'">

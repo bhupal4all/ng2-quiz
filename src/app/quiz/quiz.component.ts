@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs/Observable'
+import { Observable } from 'rxjs/Observable'
 
 import { QuizService } from '../services/quiz.service';
 import { HelperService } from '../services/helper.service';
@@ -31,6 +31,7 @@ export class QuizComponent implements OnInit {
     'showPager': true,
     'theme': 'none'
   };
+  quizCount: number = 0;
   countDown;
   counter = 60;
 
@@ -40,7 +41,7 @@ export class QuizComponent implements OnInit {
     count: 1
   };
 
-  constructor(private quizService: QuizService) { 
+  constructor(private quizService: QuizService) {
 
   }
 
@@ -61,14 +62,14 @@ export class QuizComponent implements OnInit {
         var tmp;
         var len = this.pager.count;
         var ret = this.quiz.questions.slice();
-      
+
         while (len) {
           rand = Math.floor(Math.random() * len--);
           tmp = ret[len];
           ret[len] = ret[rand];
           ret[rand] = tmp;
         }
-  
+
         this.quiz.questions = ret;
       }
     });
@@ -117,6 +118,26 @@ export class QuizComponent implements OnInit {
   onSubmit() {
     let answers = [];
     this.quiz.questions.forEach(x => answers.push({ 'quizId': this.quiz.id, 'questionId': x.id, 'answered': x.answered }));
+
+    let noOfAnswers: number = 0;
+    let noOfSelected: number = 0;
+    this.quizCount = 0;
+    this.quiz.questions.forEach(q => {
+
+      noOfAnswers = 0;
+      noOfSelected = 0;
+      q.options.forEach(op => {
+        if (op.isAnswer) {
+          noOfAnswers++;
+
+          if (op.selected)
+            noOfSelected++;
+        }
+      });
+      if (noOfAnswers === noOfSelected) {
+        this.quizCount++;
+      }
+    });
 
     // Post your data to the server here. answers contains the questionId and the users' answer.
     console.log(this.quiz.questions);
