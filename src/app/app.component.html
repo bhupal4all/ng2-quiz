@@ -1,3 +1,8 @@
 <div class="container">
-  <app-quiz></app-quiz>
+  <div *ngIf='!startQuiz'>
+    <h1>Welcome To Questinair</h1>
+    <button class="btn btn-primary" (click)='start()'>Start</button>
+    <app-quiz-entry></app-quiz-entry>
+  </div>
+  <app-quiz *ngIf='startQuiz'></app-quiz>
 </div>

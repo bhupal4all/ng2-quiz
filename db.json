@@ -1,0 +1,1407 @@
+{
+"aws": {
+    "id": 40,
+    "name": "AWS Questions",
+    "description": "AWS Questionair",
+    "pager": {
+        "size": 2
+    },
+    "config": {
+        "shuffleQuestions": false,
+        "allowBack": true,
+        "autoMove": false
+    },
+    "questions": [
+    {
+        "name": "What does Amazon EC2 provide?",
+        "options": [
+            {
+                "name": "Virtual servers in the Cloud",
+                "isAnswer": true,
+                "questionId": 1,
+                "id": 10010
+            },
+            {
+                "name": "A platform to run code (Java, PHP, Python), paying on an hourly basis",
+                "isAnswer": false,
+                "questionId": 1,
+                "id": 10011
+            },
+            {
+                "name": "Computer Clusters in the Cloud",
+                "isAnswer": false,
+                "questionId": 1,
+                "id": 10012
+            },
+            {
+                "name": "Physical servers, remotely managed by the customer",
+                "isAnswer": false,
+                "questionId": 1,
+                "id": 10013
+            }
+        ],
+        "id": 1,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Amazon SWF is designed to help users____",
+        "options": [
+            {
+                "name": "Design graphical user interface interactions ",
+                "isAnswer": false,
+                "questionId": 2,
+                "id": 10020
+            },
+            {
+                "name": "Manage user identification and authorization ",
+                "isAnswer": false,
+                "questionId": 2,
+                "id": 10021
+            },
+            {
+                "name": " Store Web content",
+                "isAnswer": false,
+                "questionId": 2,
+                "id": 10022
+            },
+            {
+                "name": "Coordinate synchronous and asynchronous tasks which are distributed and fault tolerant ",
+                "isAnswer": true,
+                "questionId": 2,
+                "id": 10023
+            }
+        ],
+        "id": 2,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Can I control if and when MySQL based RDS Instance is upgraded to new supported versions?",
+        "options": [
+            {
+                "name": "No",
+                "isAnswer": false,
+                "questionId": 3,
+                "id": 10030
+            },
+            {
+                "name": "Only in VPC",
+                "isAnswer": false,
+                "questionId": 3,
+                "id": 10031
+            },
+            {
+                "name": "Yes",
+                "isAnswer": true,
+                "questionId": 3,
+                "id": 10032
+            },
+            {
+                "name": "",
+                "isAnswer": false,
+                "questionId": 3,
+                "id": 10033
+            }
+        ],
+        "id": 3,
+        "questionTypeId": 1
+    },
+    {
+        "name": "If I modify a DB Instance or the DB parameter group associated with the instance, should I reboot the instance for the changes to take effect? ",
+        "options": [
+            {
+                "name": "No",
+                "isAnswer": false,
+                "questionId": 4,
+                "id": 10040
+            },
+            {
+                "name": "Yes",
+                "isAnswer": true,
+                "questionId": 4,
+                "id": 10041
+            },
+            {
+                "name": "",
+                "isAnswer": false,
+                "questionId": 4,
+                "id": 10042
+            },
+            {
+                "name": "",
+                "isAnswer": false,
+                "questionId": 4,
+                "id": 10043
+            }
+        ],
+        "id": 4,
+        "questionTypeId": 1
+    },
+    {
+        "name": "By default, EBS volumes that are created and attached to an instance at launch are deleted when that instance is terminated. You can modify this behavior by changing the value of the flag____ to false when you launch the instance",
+        "options": [
+            {
+                "name": "DeleteOnTermination ",
+                "isAnswer": true,
+                "questionId": 5,
+                "id": 10050
+            },
+            {
+                "name": "RemoveOnDeletion ",
+                "isAnswer": false,
+                "questionId": 5,
+                "id": 10051
+            },
+            {
+                "name": "RemoveOnTermination ",
+                "isAnswer": false,
+                "questionId": 5,
+                "id": 10052
+            },
+            {
+                "name": "TerminateOnDeletion ",
+                "isAnswer": false,
+                "questionId": 5,
+                "id": 10053
+            }
+        ],
+        "id": 5,
+        "questionTypeId": 1
+    },
+    {
+        "name": "What are the initial settings of a user created security group? ",
+        "options": [
+            {
+                "name": " Allow all inbound traffic and Allow no outbound traffic ",
+                "isAnswer": false,
+                "questionId": 6,
+                "id": 10060
+            },
+            {
+                "name": " Allow no inbound traffic and Allow no outbound traffic ",
+                "isAnswer": false,
+                "questionId": 6,
+                "id": 10061
+            },
+            {
+                "name": " Allow no inbound traffic and Allow all outbound traffic ",
+                "isAnswer": true,
+                "questionId": 6,
+                "id": 10062
+            },
+            {
+                "name": " Allow all inbound traffic and Allow all outbound traffic ",
+                "isAnswer": false,
+                "questionId": 6,
+                "id": 10063
+            }
+        ],
+        "id": 6,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Will my standby RDS instance be in the same Region as my primary? ",
+        "options": [
+            {
+                "name": "Only for Oracle RDS types ",
+                "isAnswer": false,
+                "questionId": 7,
+                "id": 10070
+            },
+            {
+                "name": "Yes",
+                "isAnswer": true,
+                "questionId": 7,
+                "id": 10071
+            },
+            {
+                "name": "Only if configured at launch",
+                "isAnswer": false,
+                "questionId": 7,
+                "id": 10072
+            },
+            {
+                "name": "No",
+                "isAnswer": false,
+                "questionId": 7,
+                "id": 10073
+            }
+        ],
+        "id": 7,
+        "questionTypeId": 1
+    },
+    {
+        "name": "What does Amazon Elastic Beanstalk provide? ",
+        "options": [
+            {
+                "name": "A scalable storage appliance on top of Amazon Web Services",
+                "isAnswer": false,
+                "questionId": 8,
+                "id": 10080
+            },
+            {
+                "name": "An application container on top of Amazon Web Services",
+                "isAnswer": true,
+                "questionId": 8,
+                "id": 10081
+            },
+            {
+                "name": "A service by this name doesn't exist",
+                "isAnswer": false,
+                "questionId": 8,
+                "id": 10082
+            },
+            {
+                "name": "A scalable cluster of EC2 instances",
+                "isAnswer": false,
+                "questionId": 8,
+                "id": 10083
+            }
+        ],
+        "id": 8,
+        "questionTypeId": 1
+    },
+    {
+        "name": "True or False: When using IAM to control access to your RDS resources, the key names that can be used are case sensitive. <br/><br/>For example: <code>aws:CurrentTime is NOT equivalent to AWS:currenttime. </code>",
+        "options": [
+            {
+                "name": "true",
+                "isAnswer": true,
+                "questionId": 9,
+                "id": 10090
+            },
+            {
+                "name": "false",
+                "isAnswer": false,
+                "questionId": 9,
+                "id": 10091
+            },
+            {
+                "name": "",
+                "isAnswer": false,
+                "questionId": 9,
+                "id": 10092
+            },
+            {
+                "name": "",
+                "isAnswer": false,
+                "questionId": 9,
+                "id": 10093
+            }
+        ],
+        "id": 9,
+        "questionTypeId": 1
+    },
+    {
+        "name": "What will be the status of the snapshot until the snapshot is complete? ",
+        "options": [
+            {
+                "name": "running",
+                "isAnswer": false,
+                "questionId": 10,
+                "id": 10100
+            },
+            {
+                "name": "working",
+                "isAnswer": false,
+                "questionId": 10,
+                "id": 10101
+            },
+            {
+                "name": "processing",
+                "isAnswer": false,
+                "questionId": 10,
+                "id": 10102
+            },
+            {
+                "name": "pending",
+                "isAnswer": true,
+                "questionId": 10,
+                "id": 10103
+            }
+        ],
+        "id": 10
+    },
+    {
+        "name": "Can we attach an EBS volume to more than one EC2 instance at the same time? ",
+        "options": [
+            {
+                "name": "No",
+                "isAnswer": true,
+                "questionId": 11,
+                "id": 10110
+            },
+            {
+                "name": "Yes",
+                "isAnswer": false,
+                "questionId": 11,
+                "id": 10111
+            },
+            {
+                "name": "Only EC2-optimized EBS volumes ",
+                "isAnswer": false,
+                "questionId": 11,
+                "id": 10112
+            },
+            {
+                "name": "Only in read mode ",
+                "isAnswer": false,
+                "questionId": 11,
+                "id": 10113
+            }
+        ],
+        "id": 11,
+        "questionTypeId": 1
+    },
+    {
+        "name": "True or False: Automated backups are enabled by default for a new DB Instance",
+        "options": [
+            {
+                "name": "true",
+                "isAnswer": true,
+                "questionId": 12,
+                "id": 10120
+            },
+            {
+                "name": "false",
+                "isAnswer": false,
+                "questionId": 12,
+                "id": 10121
+            },
+            {
+                "name": "",
+                "isAnswer": false,
+                "questionId": 12,
+                "id": 10122
+            },
+            {
+                "name": "",
+                "isAnswer": false,
+                "questionId": 12,
+                "id": 10123
+            }
+        ],
+        "id": 12,
+        "questionTypeId": 1
+    },
+    {
+        "name": "What does the AWS Storage Gateway provide? ",
+        "options": [
+            {
+                "name": "It allows to integrate on-premises IT environments with Cloud Storage",
+                "isAnswer": true,
+                "questionId": 13,
+                "id": 10130
+            },
+            {
+                "name": "A direct encrypted connection to Amazon S3",
+                "isAnswer": false,
+                "questionId": 13,
+                "id": 10131
+            },
+            {
+                "name": "It's a backup solution that provides an on-premises Cloud storage",
+                "isAnswer": false,
+                "questionId": 13,
+                "id": 10132
+            },
+            {
+                "name": "It provides an encrypted SSL endpoint for backups in the Cloud",
+                "isAnswer": false,
+                "questionId": 13,
+                "id": 10133
+            }
+        ],
+        "id": 13,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Amazon RDS automated backups and DB Snapshots are currently supported for only the ____ storage engine",
+        "options": [
+            {
+                "name": "InnoDB",
+                "isAnswer": true,
+                "questionId": 14,
+                "id": 10140
+            },
+            {
+                "name": "MyISAM",
+                "isAnswer": false,
+                "questionId": 14,
+                "id": 10141
+            },
+            {
+                "name": "",
+                "isAnswer": false,
+                "questionId": 14,
+                "id": 10142
+            },
+            {
+                "name": "",
+                "isAnswer": false,
+                "questionId": 14,
+                "id": 10143
+            }
+        ],
+        "id": 14,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Does DynamoDB support in-place atomic updates?",
+        "options": [
+            {
+                "name": "Yes",
+                "isAnswer": true,
+                "questionId": 15,
+                "id": 10150
+            },
+            {
+                "name": "No",
+                "isAnswer": false,
+                "questionId": 15,
+                "id": 10151
+            },
+            {
+                "name": "It does support in-place non-atomic updates",
+                "isAnswer": false,
+                "questionId": 15,
+                "id": 10152
+            },
+            {
+                "name": "It is not defined",
+                "isAnswer": false,
+                "questionId": 15,
+                "id": 10153
+            }
+        ],
+        "explanation": "DynamoDB supports in-place atomic updates",
+        "id": 15,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Your manager has just given you access to multiple VPN connections that someone else has recently set up between all your company's offices. She needs you to make sure that the communication between the VPNs is secure. Which of the following services would be best for providing a low-cost hub-and-spoke model for primary or backup connectMty between these remote offices?<br/>",
+        "options": [
+            {
+                "name": "Amazon Cloud Front",
+                "isAnswer": false,
+                "questionId": 16,
+                "id": 10160
+            },
+            {
+                "name": "AWS Direct Connect",
+                "isAnswer": false,
+                "questionId": 16,
+                "id": 10161
+            },
+            {
+                "name": "AWS CloudHSM",
+                "isAnswer": false,
+                "questionId": 16,
+                "id": 10162
+            },
+            {
+                "name": "AWS Cloud Hub",
+                "isAnswer": true,
+                "questionId": 16,
+                "id": 10163
+            }
+        ],
+        "explanation": "If you have multiple VPN connections, you can provide secure communication between sites using the<br/>AWS VPN CIoudHub. The VPN CIoudHub operates on a simple hub-and-spoke model that you can use with or without a VPC. This design is suitable for customers with multiple branch offices and existing Internet connections who would like to implement a convenient, potentially low-cost hub-and-spoke model for primary or backup connectMty between these remote offices.<br/>",
+        "id": 16,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Amazon EC2 provides a . It is an HTTP or HTTPS request that uses the HTTP verbs GET or POST",
+        "options": [
+            {
+                "name": "web database",
+                "isAnswer": false,
+                "questionId": 17,
+                "id": 10170
+            },
+            {
+                "name": ".net framework",
+                "isAnswer": false,
+                "questionId": 17,
+                "id": 10171
+            },
+            {
+                "name": "Query API",
+                "isAnswer": true,
+                "questionId": 17,
+                "id": 10172
+            },
+            {
+                "name": "C Library",
+                "isAnswer": false,
+                "questionId": 17,
+                "id": 10173
+            }
+        ],
+        "explanation": "Amazon EC2 provides a Query API. These requests are HTTP or HTTPS requests that use the HTTP verbs GET or POST and a Query parameter named Action",
+        "id": 17,
+        "questionTypeId": 1
+    },
+    {
+        "name": "In Amazon AWS, which of the following statements is true of key pairs?",
+        "options": [
+            {
+                "name": " Key pairs are used only for Amazon SDKs",
+                "isAnswer": false,
+                "questionId": 18,
+                "id": 10180
+            },
+            {
+                "name": "Key pairs are used only for Amazon EC2 and Amazon CIoudFront",
+                "isAnswer": true,
+                "questionId": 18,
+                "id": 10181
+            },
+            {
+                "name": "Key pairs are used only for Elastic Load Balancing and AWS IAM",
+                "isAnswer": false,
+                "questionId": 18,
+                "id": 10182
+            },
+            {
+                "name": "Key pairs are used for all Amazon services",
+                "isAnswer": false,
+                "questionId": 18,
+                "id": 10183
+            }
+        ],
+        "explanation": "Key pairs consist of a public and private key, where you use the private key to create a digital signature, and then AWS uses the corresponding public key to validate the signature. Key pairs are used only for Amazon EC2 and Amazon CIoudFront",
+        "id": 18,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Does Amazon DynamoDB support both increment and decrement atomic operations?",
+        "options": [
+            {
+                "name": "Only increment, since decrement are inherently impossible with DynamoDB's data model",
+                "isAnswer": false,
+                "questionId": 19,
+                "id": 10190
+            },
+            {
+                "name": "No, neither increment nor decrement operations",
+                "isAnswer": false,
+                "questionId": 19,
+                "id": 10191
+            },
+            {
+                "name": "Yes, both increment and decrement operations",
+                "isAnswer": true,
+                "questionId": 19,
+                "id": 10192
+            },
+            {
+                "name": "Only decrement, since increment are inherently impossible with DynamoDB's data model",
+                "isAnswer": false,
+                "questionId": 19,
+                "id": 10193
+            }
+        ],
+        "explanation": "Amazon DynamoDB supports increment and decrement atomic operations",
+        "id": 19
+    },
+    {
+        "name": " An organization has three separate AWS accounts, one each for development, testing, and production. The organization wants the testing team to have access to certain AWS resources in the production account. How can the organization achieve this?",
+        "options": [
+            {
+                "name": "It is not possible to access resources of one account with another account",
+                "isAnswer": false,
+                "questionId": 20,
+                "id": 10200
+            },
+            {
+                "name": "Create the IAM roles with cross account access",
+                "isAnswer": true,
+                "questionId": 20,
+                "id": 10201
+            },
+            {
+                "name": "Create the IAM user in a test account, and allow it access to the production environment with the IAM policy",
+                "isAnswer": false,
+                "questionId": 20,
+                "id": 10202
+            },
+            {
+                "name": "Create the IAM users with cross account access",
+                "isAnswer": false,
+                "questionId": 20,
+                "id": 10203
+            }
+        ],
+        "explanation": "An organization has multiple AWS accounts to isolate a development environment from a testing or production environment. At times the users from one account need to access resources in the other account, such as promoting an update from the development environment to the production environment. In this case the IAM role with cross account access will provide a solution. Cross account access lets one account share access to their resources with users in the other AWS accounts",
+        "id": 20,
+        "questionTypeId": 1
+    },
+    {
+        "name": "You need to import several hundred megabytes of data from a local Oracle database to an Amazon RDS DB instance. What does AWS recommend you use to accomplish this?",
+        "options": [
+            {
+                "name": "Oracle export/import utilities",
+                "isAnswer": false,
+                "questionId": 21,
+                "id": 10210
+            },
+            {
+                "name": "Oracle SQL Developer",
+                "isAnswer": false,
+                "questionId": 21,
+                "id": 10211
+            },
+            {
+                "name": "Oracle Data Pump",
+                "isAnswer": true,
+                "questionId": 21,
+                "id": 10212
+            },
+            {
+                "name": "DBMS_FILE_TRANSFER",
+                "isAnswer": false,
+                "questionId": 21,
+                "id": 10213
+            }
+        ],
+        "explanation": "How you import data into an Amazon RDS DB instance depends on the amount of data you have and the number and variety of database objects in your database.<br/>For example, you can use Oracle SQL Developer to import a simple, 20 MB database; you want to use Oracle Data Pump to import complex databases or databases that are several hundred megabytes or several terabytes in size",
+        "id": 21,
+        "questionTypeId": 1
+    },
+    {
+        "name": "A user has created an EBS volume with 1000 IOPS. What is the average IOPS that the user will get for most of the year as per EC2 SLA if the instance is attached to the EBS optimized instance?",
+        "options": [
+            {
+                "name": "950",
+                "isAnswer": false,
+                "questionId": 22,
+                "id": 10220
+            },
+            {
+                "name": "990",
+                "isAnswer": false,
+                "questionId": 22,
+                "id": 10221
+            },
+            {
+                "name": "1000",
+                "isAnswer": false,
+                "questionId": 22,
+                "id": 10222
+            },
+            {
+                "name": "900",
+                "isAnswer": true,
+                "questionId": 22,
+                "id": 10223
+            }
+        ],
+        "explanation": "As per AWS SLA if the instance is attached to an EBS-Optimized instance, then the Provisioned IOPS volumes are designed to deliver within 10% of the provisioned IOPS performance 99.9% of the time in a given year. Thus, if the user has created a volume of 1000 IOPS, the user will get a minimum 900 IOPS 99.9% time of the year",
+        "id": 22,
+        "questionTypeId": 1
+    },
+    {
+        "name": "You need to migrate a large amount of data into the cloud that you have stored on a hard disk and you decide that the best way to accomplish this is with AWS Import/Export and you mail the hard disk to AWS. Which of the following statements is incorrect in regards to AWS Import/Export?",
+        "options": [
+            {
+                "name": "It can export from Amazon S3",
+                "isAnswer": false,
+                "questionId": 23,
+                "id": 10230
+            },
+            {
+                "name": "It can Import to Amazon Glacier",
+                "isAnswer": false,
+                "questionId": 23,
+                "id": 10231
+            },
+            {
+                "name": "It can export from Amazon Glacier",
+                "isAnswer": true,
+                "questionId": 23,
+                "id": 10232
+            },
+            {
+                "name": "It can Import to Amazon EBS ",
+                "isAnswer": false,
+                "questionId": 23,
+                "id": 10233
+            }
+        ],
+        "explanation": "AWS Import/Export supports: Import to Amazon S3<br/>Export from Amazon S3 Import to Amazon EBS Import to Amazon Glacier",
+        "id": 23
+    },
+    {
+        "name": "You are in the process of creating a Route 53 DNS failover to direct traffic to two EC2 zones. Obviously, if one fails, you would like Route 53 to direct traffic to the other region. Each region has an ELB with some instances being distributed. What is the best way for you to configure the Route 53 health check?",
+        "options": [
+            {
+                "name": "Route 53 doesn't support ELB with an internal health check.You need to create your own Route 53 health check of the ELB",
+                "isAnswer": false,
+                "questionId": 24,
+                "id": 10240
+            },
+            {
+                "name": "Route 53 natively supports ELB with an internal health check. Turn \"Eva|uate target health\" off and \"Associate with Health Check\" on and R53 will use the ELB's internal health check",
+                "isAnswer": false,
+                "questionId": 24,
+                "id": 10241
+            },
+            {
+                "name": "Route 53 doesn't support ELB with an internal health check. You need to associate your resource record set for the ELB with your own health check",
+                "isAnswer": false,
+                "questionId": 24,
+                "id": 10242
+            },
+            {
+                "name": "Route 53 natively supports ELB with an internal health check. Turn \"Eva|uate target health\" on and \"Associate with Health Check\" off and R53 will use the ELB's internal health check",
+                "isAnswer": true,
+                "questionId": 24,
+                "id": 10243
+            }
+        ],
+        "explanation": "With DNS Failover, Amazon Route 53 can help detect an outage of your website and redirect your end users to alternate locations where your application is operating properly. When you enable this feature, Route 53 uses health checks-regularly making Internet requests to your appIication’s endpoints from multiple locations around the world-to determine whether each endpoint of your application is up or down.<br/>To enable DNS Failover for an ELB endpoint, create an Alias record pointing to the ELB and set the \"EvaIuate Target HeaIth\" parameter to true. Route 53 creates and manages the health checks for your ELB automatically. You do not need to create your own Route 53 health check of the ELB. You also do not need to associate your resource record set for the ELB with your own health check, because Route 53 automatically associates it with the health checks that Route 53 manages on your behalf. The ELB health check will also inherit the health of your backend instances behind that ELB.",
+        "id": 24,
+        "questionTypeId": 1
+    },
+    {
+        "name": "A user wants to use an EBS-backed Amazon EC2 instance for a temporary job. Based on the input data, the job is most likely to finish within a week. Which of the following steps should be followed to terminate the instance automatically once the job is finished?",
+        "options": [
+            {
+                "name": "Configure the EC2 instance with a stop instance to terminate it",
+                "isAnswer": false,
+                "questionId": 25,
+                "id": 10250
+            },
+            {
+                "name": "Configure the EC2 instance with ELB to terminate the instance when it remains idle",
+                "isAnswer": false,
+                "questionId": 25,
+                "id": 10251
+            },
+            {
+                "name": "Configure the CIoudWatch alarm on the instance that should perform the termination action once the instance is idle",
+                "isAnswer": true,
+                "questionId": 25,
+                "id": 10252
+            },
+            {
+                "name": " Configure the Auto Scaling schedule actMty that terminates the instance after 7 days",
+                "isAnswer": false,
+                "questionId": 25,
+                "id": 10253
+            }
+        ],
+        "explanation": "Auto Scaling can start and stop the instance at a pre-defined time. Here, the total running time is unknown. Thus, the user has to use the CIoudWatch alarm, which monitors the CPU utilization. The user can create an alarm that is triggered when the average CPU utilization percentage has been lower than 10 percent<br/>for 24 hours, signaling that it is idle and no longer in use. When the utilization is below the threshold limit, it will terminate the instance as a part of the instance action.",
+        "id": 25,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Which of the following is true of Amazon EC2 security group?",
+        "options": [
+            {
+                "name": "You can modify the outbound rules for EC2-Classic",
+                "isAnswer": false,
+                "questionId": 26,
+                "id": 10260
+            },
+            {
+                "name": "You can modify the rules for a security group only if the security group controls the traffic for just one instance",
+                "isAnswer": false,
+                "questionId": 26,
+                "id": 10261
+            },
+            {
+                "name": "You can modify the rules for a security group only when a new instance is created",
+                "isAnswer": false,
+                "questionId": 26,
+                "id": 10262
+            },
+            {
+                "name": "You can modify the rules for a security group at any time",
+                "isAnswer": true,
+                "questionId": 26,
+                "id": 10263
+            }
+        ],
+        "explanation": "A security group acts as a virtual firewall that controls the traffic for one or more instances. When you launch an instance, you associate one or more security groups with the instance. You add rules to each security group that allow traffic to or from its associated instances. You can modify the rules for a security group at any time; the new rules are automatically applied to all instances that are associated with the security group.",
+        "id": 26,
+        "questionTypeId": 1
+    },
+    {
+        "name": "An Elastic IP address (EIP) is a static IP address designed for dynamic cloud computing. With an EIP, you can mask the failure of an instance or software by rapidly remapping the address to another instance in your account. Your EIP is associated with your AWS account, not a particular EC2 instance, and it  remains associated with your account until you choose to explicitly release it. By default how many EIPs  is each AWS account limited to on a per region basis?",
+        "options": [
+            {
+                "name": "1",
+                "isAnswer": false,
+                "questionId": 27,
+                "id": 10270
+            },
+            {
+                "name": "5",
+                "isAnswer": true,
+                "questionId": 27,
+                "id": 10271
+            },
+            {
+                "name": "Unlimited",
+                "isAnswer": false,
+                "questionId": 27,
+                "id": 10272
+            },
+            {
+                "name": "10",
+                "isAnswer": false,
+                "questionId": 27,
+                "id": 10273
+            }
+        ],
+        "explanation": "By default, all AWS accounts are limited to 5 Elastic IP addresses per region for each AWS account, because public (IPv4) Internet addresses are a scarce public resource. AWS strongly encourages you to use an EIP primarily for load balancing use cases, and use DNS hostnames for all other inter-node communication.<br/>If you feel your architecture warrants additional EIPs, you would need to complete the Amazon EC2 Elastic IP Address Request Form and give reasons as to your need for additional addresses",
+        "id": 27,
+        "questionTypeId": 1
+    },
+    {
+        "name": "In Amazon EC2, partial instance-hours are billed",
+        "options": [
+            {
+                "name": "per second used in the hour",
+                "isAnswer": false,
+                "questionId": 28,
+                "id": 10280
+            },
+            {
+                "name": "per minute used",
+                "isAnswer": false,
+                "questionId": 28,
+                "id": 10281
+            },
+            {
+                "name": "by combining partial segments into full hours",
+                "isAnswer": false,
+                "questionId": 28,
+                "id": 10282
+            },
+            {
+                "name": "as full hours",
+                "isAnswer": true,
+                "questionId": 28,
+                "id": 10283
+            }
+        ],
+        "explanation": "Partial instance-hours are billed to the next hour",
+        "id": 28,
+        "questionTypeId": 1
+    },
+    {
+        "name": "In EC2, what happens to the data in an instance store if an instance reboots (either intentionally or unintentionally)?",
+        "options": [
+            {
+                "name": "Data is deleted from the instance store for security reasons",
+                "isAnswer": false,
+                "questionId": 29,
+                "id": 10290
+            },
+            {
+                "name": "Data persists in the instance store",
+                "isAnswer": true,
+                "questionId": 29,
+                "id": 10291
+            },
+            {
+                "name": "Data is partially present in the instance store",
+                "isAnswer": false,
+                "questionId": 29,
+                "id": 10292
+            },
+            {
+                "name": "Data in the instance store will be lost",
+                "isAnswer": false,
+                "questionId": 29,
+                "id": 10293
+            }
+        ],
+        "explanation": "The data in an instance store persists only during the lifetime of its associated instance. If an instance reboots (intentionally or unintentionally), data in the instance store persists. However, data on instance store volumes is lost under the following circumstances.<br/>Failure of an underlying drive<br/>Stopping an Amazon EBS-backed instance Terminating an instance",
+        "id": 29,
+        "questionTypeId": 1
+    },
+    {
+        "name": "You are setting up a VPC and you need to set up a public subnet within that VPC. Which following requirement must be met for this subnet to be considered a public subnet?",
+        "options": [
+            {
+                "name": "Subnet's traffic is not routed to an internet gateway but has its traffic routed to a virtual private gateway",
+                "isAnswer": false,
+                "questionId": 30,
+                "id": 10300
+            },
+            {
+                "name": "Subnet's traffic is routed to an internet gateway",
+                "isAnswer": true,
+                "questionId": 30,
+                "id": 10301
+            },
+            {
+                "name": "Subnet's traffic is not routed to an internet gateway",
+                "isAnswer": false,
+                "questionId": 30,
+                "id": 10302
+            },
+            {
+                "name": "None of these answers can be considered a public subnet",
+                "isAnswer": false,
+                "questionId": 30,
+                "id": 10303
+            }
+        ],
+        "explanation": "A virtual private cloud (VPC) is a virtual network dedicated to your AWS account. It is logically isolated from other virtual networks in the AWS cloud. You can launch your AWS resources, such as Amazon EC2 instances, into your VPC. You can configure your VPC: you can select its IP address range, create   subnets, and configure route tables, network gateways, and security settings.<br/>A subnet is a range of IP addresses in your VPC. You can launch AWS resources into a subnet that you select. Use a public subnet for resources that must be connected to the internet, and a private subnet for resources that won't be connected to the Internet.<br/>If a subnet's traffic is routed to an internet gateway, the subnet is known as a public subnet.<br/>If a subnet doesn't have a route to the internet gateway, the subnet is known as a private subnet.<br/>If a subnet doesn't have a route to the internet gateway, but has its traffic routed to a virtual private gateway, the subnet is known as a VPN-only subnet.<br/>",
+        "id": 30,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Can you specify the security group that you created for a VPC when you launch an instance in EC2-Classic?",
+        "options": [
+            {
+                "name": "No, you can specify the security group created for EC2-Classic when you launch a VPC instance",
+                "isAnswer": false,
+                "questionId": 31,
+                "id": 10310
+            },
+            {
+                "name": "No",
+                "isAnswer": true,
+                "questionId": 31,
+                "id": 10311
+            },
+            {
+                "name": "Yes",
+                "isAnswer": false,
+                "questionId": 31,
+                "id": 10312
+            },
+            {
+                "name": "No, you can specify the security group created for EC2-Classic to a non-VPC based instance only",
+                "isAnswer": false,
+                "questionId": 31,
+                "id": 10313
+            }
+        ],
+        "explanation": "If you're using EC2-Classic, you must use security groups created specifically for EC2-Classic. When you launch an instance in EC2-Classic, you must specify a security group in the same region as the instance. You can't specify a security group that you created for a VPC when you launch an instance in EC2-Classic.",
+        "id": 31,
+        "questionTypeId": 1
+    },
+    {
+        "name": "While using the EC2 GET requests as URLs, the is the URL that serves as the entry point for the web service.",
+        "options": [
+            {
+                "name": "token",
+                "isAnswer": false,
+                "questionId": 32,
+                "id": 10320
+            },
+            {
+                "name": "endpoint",
+                "isAnswer": true,
+                "questionId": 32,
+                "id": 10321
+            },
+            {
+                "name": "action",
+                "isAnswer": false,
+                "questionId": 32,
+                "id": 10322
+            },
+            {
+                "name": "None of these",
+                "isAnswer": false,
+                "questionId": 32,
+                "id": 10323
+            }
+        ],
+        "explanation": "The endpoint is the URL that serves as the entry point for the web service",
+        "id": 32,
+        "questionTypeId": 1
+    },
+    {
+        "name": "You have been asked to build a database warehouse using Amazon Redshift. You know a little about it, including that it is a SQL data warehouse solution, and uses industry standard ODBC and JDBC connections and PostgreSQL drivers. However you are not sure about what sort of storage it uses for database tables. What sort of storage does Amazon Redshift use for database tables?<br/>",
+        "options": [
+            {
+                "name": "InnoDB Tables",
+                "isAnswer": false,
+                "questionId": 33,
+                "id": 10330
+            },
+            {
+                "name": "NDB data storage",
+                "isAnswer": false,
+                "questionId": 33,
+                "id": 10331
+            },
+            {
+                "name": "Columnar data storage",
+                "isAnswer": true,
+                "questionId": 33,
+                "id": 10332
+            },
+            {
+                "name": "NDB CLUSTER Storage",
+                "isAnswer": false,
+                "questionId": 33,
+                "id": 10333
+            }
+        ],
+        "explanation": "Amazon Redshift achieves efficient storage and optimum query performance through a combination of massively parallel processing, columnar data storage, and very efficient, targeted data compression encoding schemes.<br/>Columnar storage for database tables is an important factor in optimizing analytic query performance because it drastically reduces the overall disk I/O requirements and reduces the amount of data you need to load from disk.<br/>",
+        "id": 33,
+        "questionTypeId": 1
+    },
+    {
+        "name": "You are checking the workload on some of your General Purpose (SSD) and Provisioned IOPS (SSD) volumes and it seems that the I/O latency is higher than you require. You should probably check the  to make sure that your application is not trying to drive more IOPS than you have provisioned.",
+        "options": [
+            {
+                "name": "Amount of IOPS that are available",
+                "isAnswer": false,
+                "questionId": 34,
+                "id": 10340
+            },
+            {
+                "name": "Acknowledgement from the storage subsystem",
+                "isAnswer": false,
+                "questionId": 34,
+                "id": 10341
+            },
+            {
+                "name": "Average queue length",
+                "isAnswer": true,
+                "questionId": 34,
+                "id": 10342
+            },
+            {
+                "name": "Time it takes for the I/O operation to complete",
+                "isAnswer": false,
+                "questionId": 34,
+                "id": 10343
+            }
+        ],
+        "explanation": "In EBS workload demand plays an important role in getting the most out of your General Purpose (SSD) and Provisioned IOPS (SSD) volumes. In order for your volumes to deliver the amount of IOPS that are available, they need to have enough I/O requests sent to them. There is a relationship between the demand on the volumes, the amount of IOPS that are available to them, and the latency of the request (the amount of time it takes for the I/O operation to complete).<br/>Latency is the true end-to-end client time of an I/O operation; in other words, when the client sends a IO, how long does it take to get an acknowledgement from the storage subsystem that the IO read or write is complete.<br/>If your I/O latency is higher than you require, check your average queue length to make sure that your application is not trying to drive more IOPS than you have provisioned. You can maintain high IOPS while keeping latency down by maintaining a low average queue length (which is achieved by provisioning   more IOPS for your volume).<br/>",
+        "id": 34,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Which of the below mentioned options is not available when an instance is launched by Auto Scaling with EC2 Classic?<br/>",
+        "options": [
+            {
+                "name": "Public IP",
+                "isAnswer": false,
+                "questionId": 35,
+                "id": 10350
+            },
+            {
+                "name": "Elastic IP",
+                "isAnswer": true,
+                "questionId": 35,
+                "id": 10351
+            },
+            {
+                "name": "Private DNS",
+                "isAnswer": false,
+                "questionId": 35,
+                "id": 10352
+            },
+            {
+                "name": "Private IP",
+                "isAnswer": false,
+                "questionId": 35,
+                "id": 10353
+            }
+        ],
+        "explanation": "Auto Scaling supports both EC2 classic and EC2-VPC. When an instance is launched as a part of EC2 classic, it will have the public IP and DNS as well as the private IP and DNS.",
+        "id": 35,
+        "questionTypeId": 1
+    },
+    {
+        "name": "You have been given a scope to deploy some AWS infrastructure for a large organisation. The requirements are that you will have a lot of EC2 instances but may need to add more when the average utilization of your Amazon EC2 fileet is high and conversely remove them when CPU utilization is low. Which AWS services would be best to use to accomplish this?",
+        "options": [
+            {
+                "name": "Auto Scaling, Amazon CIoudWatch and AWS Elastic Beanstalk",
+                "isAnswer": false,
+                "questionId": 36,
+                "id": 10360
+            },
+            {
+                "name": "Auto Scaling, Amazon CIoudWatch and Elastic Load Balancing",
+                "isAnswer": true,
+                "questionId": 36,
+                "id": 10361
+            },
+            {
+                "name": "Amazon CIoudFront, Amazon CIoudWatch and Elastic Load Balancing",
+                "isAnswer": false,
+                "questionId": 36,
+                "id": 10362
+            },
+            {
+                "name": "AWS Elastic Beanstalk , Amazon CIoudWatch and Elastic Load Balancing",
+                "isAnswer": false,
+                "questionId": 36,
+                "id": 10363
+            }
+        ],
+        "explanation": "Auto Scaling enables you to follow the demand curve for your applications closely, reducing the need to manually provision Amazon EC2 capacity in advance. For example, you can set a condition to add new<br/>Amazon EC2 instances in increments to the Auto Scaling group when the average utilization of your Amazon EC2 fileet is high; and similarly, you can set a condition to remove instances in the same increments when CPU utilization is low. If you have predictable load changes, you can set a schedule through Auto Scaling to plan your scaling actMties. You can use Amazon CIoudWatch to send alarms to trigger scaling actMties and Elastic Load Balancing to help distribute traffic to your instances within Auto Scaling groups. Auto Scaling enables you to run your Amazon EC2 fileet at optimal utilization.<br/>",
+        "id": 36,
+        "questionTypeId": 1
+    },
+    {
+        "name": "You are building infrastructure for a data warehousing solution and an extra request has come through that there will be a lot of business reporting queries running all the time and you are not sure if your current DB instance will be able to handle it. What would be the best solution for this?",
+        "options": [
+            {
+                "name": "DB Parameter Groups",
+                "isAnswer": false,
+                "questionId": 37,
+                "id": 10370
+            },
+            {
+                "name": "Read Replicas",
+                "isAnswer": true,
+                "questionId": 37,
+                "id": 10371
+            },
+            {
+                "name": "Multi-AZ DB Instance deployment",
+                "isAnswer": false,
+                "questionId": 37,
+                "id": 10372
+            },
+            {
+                "name": "Database Snapshots",
+                "isAnswer": false,
+                "questionId": 37,
+                "id": 10373
+            }
+        ],
+        "explanation": "Read Replicas make it easy to take advantage of MySQL’s built-in replication functionality to elastically scale out beyond the capacity constraints of a single DB Instance for read-heavy database workloads. There are a variety of scenarios where deploying one or more Read Replicas for a given source DB Instance may make sense. Common reasons for deploying a Read Replica include:<br/>Scaling beyond the compute or I/O capacity of a single DB Instance for read-heavy database workloads. This excess read traffic can be directed to one or more Read Replicas.<br/>Serving read traffic while the source DB Instance is unavailable. If your source DB Instance cannot take I/O requests (e.g. due to I/O suspension for backups or scheduled maintenance), you can direct read traffic to your Read RepIica(s). For this use case, keep in mind that the data on the Read Replica may be \"staIe\" since the source DB Instance is unavailable.<br/>Business reporting or data warehousing scenarios; you may want business reporting queries to run against a Read Replica, rather than your primary, production DB Instance.",
+        "id": 37,
+        "questionTypeId": 1
+    },
+    {
+        "name": "In DynamoDB, could you use IAM to grant access to Amazon DynamoDB resources and API actions?",
+        "options": [
+            {
+                "name": "In DynamoDB there is no need to grant access",
+                "isAnswer": false,
+                "questionId": 38,
+                "id": 10380
+            },
+            {
+                "name": "Depended to the type of access",
+                "isAnswer": false,
+                "questionId": 38,
+                "id": 10381
+            },
+            {
+                "name": "No",
+                "isAnswer": false,
+                "questionId": 38,
+                "id": 10382
+            },
+            {
+                "name": "Yes",
+                "isAnswer": true,
+                "questionId": 38,
+                "id": 10383
+            }
+        ],
+        "explanation": "Amazon DynamoDB integrates with AWS Identity and Access Management (IAM). You can use AWS IAM to grant access to Amazon DynamoDB resources and API actions. To do this, you first write an AWS IAM policy, which is a document that explicitly lists the permissions you want to grant. You then attach that  policy to an AWS IAM user or role",
+        "id": 38,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Much of your company's data does not need to be accessed often, and can take several hours for retrieval time, so it's stored on Amazon Glacier. However someone within your organization has expressed concerns that his data is more sensitive than the other data, and is wondering whether the high<br/>level of encryption that he knows is on S3 is also used on the much cheaper Glacier service. Which of the following statements would be most applicable in regards to this concern?",
+        "options": [
+            {
+                "name": "There is no encryption on Amazon Glacier, that's why it is cheaper",
+                "isAnswer": false,
+                "questionId": 39,
+                "id": 10390
+            },
+            {
+                "name": "Amazon Glacier automatically encrypts the data using AES-128 a lesser encryption method than Amazon S3 but you can change it to AES-256 if you are willing to pay more",
+                "isAnswer": false,
+                "questionId": 39,
+                "id": 10391
+            },
+            {
+                "name": "Amazon Glacier automatically encrypts the data using AES-256, the same as Amazon S3",
+                "isAnswer": true,
+                "questionId": 39,
+                "id": 10392
+            },
+            {
+                "name": "Amazon Glacier automatically encrypts the data using AES-128 a lesser encryption method than Amazon S3.",
+                "isAnswer": false,
+                "questionId": 39,
+                "id": 10393
+            }
+        ],
+        "explanation": "Like Amazon S3, the Amazon Glacier service provides low-cost, secure, and durable storage. But where S3 is designed for rapid retrieval, Glacier is meant to be used as an archival service for data that is not accessed often, and for which retrieval times of several hours are suitable.<br/>Amazon Glacier automatically encrypts the data using AES-256 and stores it durably in an immutable form. Amazon Glacier is designed to provide average annual durability of 99.999999999% for an archive. It stores each archive in multiple facilities and multiple devices. Unlike traditional systems which can require laborious data verification and manual repair, Glacier performs regular, systematic data integrity checks, and is built to be automatically self-healing.",
+        "id": 39,
+        "questionTypeId": 1
+    },
+    {
+        "name": "Your EBS volumes do not seem to be performing as expected and your team leader has requested you look into improving their performance. Which of the following is not a true statement relating to the performance of your EBS volumes?",
+        "options": [
+            {
+                "name": "Frequent snapshots provide a higher level of data durability and they will not degrade the performance of your application while the snapshot is in progress",
+                "isAnswer": true,
+                "questionId": 40,
+                "id": 10400
+            },
+            {
+                "name": "General Purpose (SSD) and Provisioned IOPS (SSD) volumes have a throughput limit of 128 MB/s per volume",
+                "isAnswer": false,
+                "questionId": 40,
+                "id": 10401
+            },
+            {
+                "name": "There is a relationship between the maximum performance of your EBS volumes, the amount of I/O you are drMng to them, and the amount of time it takes for each transaction to complete",
+                "isAnswer": false,
+                "questionId": 40,
+                "id": 10402
+            },
+            {
+                "name": "There is a 5 to 50 percent reduction in IOPS when you first access each block of data on a newly created or restored EBS volume",
+                "isAnswer": false,
+                "questionId": 40,
+                "id": 10403
+            }
+        ],
+        "explanation": "Several factors can affect the performance of Amazon EBS volumes, such as instance configuration, I/O characteristics, workload demand, and storage configuration.<br/>Frequent snapshots provide a higher level of data durability, but they may slightly degrade the<br/>performance of your application while the snapshot is in progress. This trade off becomes critical when you have data that changes rapidly. Whenever possible, plan for snapshots to occur during off-peak times in order to minimize workload impact.",
+        "id": 40,
+        "questionTypeId": 1
+    },
+    {
+        "name": "You've created your first load balancer and have registered your EC2 instances with the load balancer. Elastic Load Balancing routinely performs health checks on all the registered EC2 instances and automatically distributes all incoming requests to the DNS name of your load balancer across your registered, healthy EC2 instances. By default, the load balancer uses the _ protocol for checking the health of your instances.",
+        "options": [
+            {
+                "name": "HTTPS",
+                "isAnswer": false,
+                "questionId": 41,
+                "id": 10410
+            },
+            {
+                "name": "HTTP",
+                "isAnswer": true,
+                "questionId": 41,
+                "id": 10411
+            },
+            {
+                "name": "ICMP",
+                "isAnswer": false,
+                "questionId": 41,
+                "id": 10412
+            },
+            {
+                "name": "IPv6",
+                "isAnswer": false,
+                "questionId": 41,
+                "id": 10413
+            }
+        ],
+        "explanation": "In Elastic Load Balancing a health configuration uses information such as protocol, ping port, ping path (URL), response timeout period, and health check interval to determine the health state of the instances registered with the load balancer.<br/>Currently, HTTP on port 80 is the default health check. ",
+        "id": 41
+    },
+    {
+        "name": "A major finance organisation has engaged your company to set up a large data mining application. Using AWS you decide the best service for this is Amazon Elastic MapReduce(EMR) which you know uses Hadoop. Which of the following statements best describes Hadoop?<br/>",
+        "options": [
+            {
+                "name": "Hadoop is 3rd Party software which can be installed using AMI",
+                "isAnswer": false,
+                "questionId": 42,
+                "id": 10420
+            },
+            {
+                "name": "Hadoop is an open source python web framework",
+                "isAnswer": false,
+                "questionId": 42,
+                "id": 10421
+            },
+            {
+                "name": "Hadoop is an open source Java software framework",
+                "isAnswer": true,
+                "questionId": 42,
+                "id": 10422
+            },
+            {
+                "name": "Hadoop is an open source javascript framework ",
+                "isAnswer": false,
+                "questionId": 42,
+                "id": 10423
+            }
+        ],
+        "explanation": "Amazon EMR uses Apache Hadoop as its distributed data processing engine.<br/>Hadoop is an open source, Java software framework that supports data-intensive distributed applications running on large clusters of commodity hardware. Hadoop implements a programming model named \"MapReduce,\" where the data is dMded into many small fragments of work, each of which may be executed on any node in the cluster.<br/>This framework has been widely used by developers, enterprises and startups and has proven to be a reliable software platform for processing up to petabytes of data on clusters of thousands of commodity machines.<br/>",
+        "id": 42,
+        "questionTypeId": 1
+    },
+    {
+        "name": "In Amazon EC2 Container Service, are other container types supported?<br/>",
+        "options": [
+            {
+                "name": "Yes, EC2 Container Service supports any container service you need",
+                "isAnswer": false,
+                "questionId": 43,
+                "id": 10430
+            },
+            {
+                "name": "Yes, EC2 Container Service also supports Microsoft container service",
+                "isAnswer": false,
+                "questionId": 43,
+                "id": 10431
+            },
+            {
+                "name": "No, Docker is the only container platform supported by EC2 Container Service presently",
+                "isAnswer": true,
+                "questionId": 43,
+                "id": 10432
+            },
+            {
+                "name": "Yes, EC2 Container Service supports Microsoft container service and Openstack",
+                "isAnswer": false,
+                "questionId": 43,
+                "id": 10433
+            }
+        ],
+        "explanation": "In Amazon EC2 Container Service, Docker is the only container platform supported by EC2 Container Service presently",
+        "id": 43,
+        "questionTypeId": 1
+    },
+    {
+        "name": "is a fast, filexible, fully managed push messaging service",
+        "options": [
+            {
+                "name": "Amazon SNS",
+                "isAnswer": true,
+                "questionId": 44,
+                "id": 10440
+            },
+            {
+                "name": "Amazon SES",
+                "isAnswer": false,
+                "questionId": 44,
+                "id": 10441
+            },
+            {
+                "name": "Amazon SQS",
+                "isAnswer": false,
+                "questionId": 44,
+                "id": 10442
+            },
+            {
+                "name": "Amazon FPS",
+                "isAnswer": false,
+                "questionId": 44,
+                "id": 10443
+            }
+        ],
+        "explanation": "Amazon Simple Notification Service (Amazon SNS) is a fast, filexible, fully managed push messaging service. Amazon SNS makes it simple and cost-effective to push to mobile devices such as iPhone, iPad, Android, Kindle Fire, and internet connected smart devices, as well as pushing to other distributed service",
+        "id": 44,
+        "questionTypeId": 1
+    }
+]
+}
+}

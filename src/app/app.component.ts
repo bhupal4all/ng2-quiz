@@ -8,4 +8,9 @@ import { QuizComponent } from './quiz/quiz.component'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  startQuiz:boolean =false;
+
+  start = function() {
+    this.startQuiz = true;
+  };
 }

@@ -33,20 +33,25 @@
     </div> -->
     <div class="card" *ngFor="let question of filteredQuestions;let idx = index">
       <div class="card-header bg-transparent">
-          <div class="badge badge-info">Question {{pager.index + idx + 1}} of {{pager.count}}.</div>
-          <h5>
+        <div class="badge badge-info">Question {{pager.index + idx + 1}} of {{pager.count}}.</div>
+        <h5>
           <span [innerHTML]="question.name"></span>
         </h5>
       </div>
       <ul class='list-group list-group-flush'>
-        <li class='list-group-item' *ngFor="let option of question.options">
-          <input id="{{question.id+''+option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" />
-          <label [attr.for]="question.id+''+option.id">
-            <span [innerHTML]="option.name"></span>
-          </label>
-        </li>
+        <span *ngFor="let option of question.options;let idx=index;">
+          <li class='list-group-item checkbox checkbox-info' *ngIf='option.name'>
+            <input id="{{question.id+''+option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);"
+            />
+            <label [attr.for]="question.id+''+option.id">
+              <span [innerHTML]="option.name"></span>
+            </label>
+          </li>
+        </span>
       </ul>
-      <div class="footer" *ngIf='question.hint'><p [innerHTML]='question.hint'></p> </div>
+      <div class="footer" *ngIf='question.hint'>
+        <p [innerHTML]='question.hint'></p>
+      </div>
     </div>
 
     <hr />
@@ -60,7 +65,7 @@
   </div>
 
   <div class="row review" *ngIf="mode=='review'">
-    <div class="col-sm-4" *ngFor="let question of quiz.questions; let index = index;">
+    <div class="col-sm-3" *ngFor="let question of quiz.questions; let index = index;">
       <div (click)="goTo(index)" class="{{ isAnswered(question) == 'Answered'? 'answered': 'not-answered' }}">{{index + 1}}. {{ isAnswered(question) }}</div>
     </div>
   </div>
@@ -72,13 +77,16 @@
           <span [innerHTML]='question.name'></span>
         </h5>
         <div class="row">
-          <div class="col-md-6" *ngFor="let Option of question.options">
-            <input id="{{Option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" />
-            <span [ngClass]="{'text-success': (Option.isAnswer && Option.selected === Option.isAnswer), 'text-danger': (Option.isAnswer && (Option === undefined || !Option.selected)) }" [innerHTML]='Option.name'></span>
+          <div class="col-md-6" *ngFor="let option of question.options;">
+            <span *ngIf='option.name'>
+            <input id="{{option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="option.selected" />
+            <span [ngClass]="{'text-success': (option.isAnswer && option.selected === option.isAnswer), 'text-danger': (option.isAnswer && (option === undefined || !option.selected)) }"
+              [innerHTML]='option.name'></span>
+            </span>
           </div>
         </div>
         <div>
-          <span [innerHTML]="question.explanation"></span>
+          <span class='text-info' [innerHTML]="question.explanation"></span>
         </div>
         <!-- <div class="alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{question.}}.</div> -->
         <!-- <ul>
