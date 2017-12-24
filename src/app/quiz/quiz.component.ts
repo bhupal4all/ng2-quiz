@@ -5,6 +5,7 @@ import { QuizService } from '../services/quiz.service';
 import { HelperService } from '../services/helper.service';
 import { Option, Question, Quiz, QuizConfig } from '../models/index';
 import { FilterPipe } from '../filter/FilterPipe';
+import { Pager } from '../models/pager';
 
 @Component({
   selector: 'app-quiz',
@@ -35,9 +36,9 @@ export class QuizComponent implements OnInit {
   countDown;
   counter = 60;
 
-  pager = {
+  pager: Pager = {
     index: 0,
-    size: 1,
+    size: 2,
     count: 1
   };
 
@@ -52,8 +53,10 @@ export class QuizComponent implements OnInit {
   }
 
   loadQuiz(quizName: string) {
+    this.pager.index=0;
     this.quizService.get(quizName).subscribe(res => {
       this.quiz = new Quiz(res);
+      this.pager = this.quiz.pager;
       this.pager.count = this.quiz.questions.length;
       this.config = this.quiz.config;
 

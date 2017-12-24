@@ -14,10 +14,13 @@ hr {
     margin: 8px 0;
 }
 
-input[type=checkbox]:checked + label {
-    color: lightsalmon;
-    font-style: normal;
-  } 
+li>input[type=checkbox]:checked+label {
+    color: tomato;
+}
+
+li:hover {
+    font-weight: bold;
+}
 
 .option {
     background-color: #cadaee;

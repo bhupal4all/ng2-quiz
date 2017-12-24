@@ -2,6 +2,16 @@
     "id": 1,
     "name": "Asp.Net Quiz",
     "description": "Asp.Net Quiz (contains webform, mvc, web API, etc.)",
+    "config": {
+        "shuffleQuestions": true,
+        "allowBack": true,
+        "autoMove": false
+    },
+    "pager": {
+        "index": 0,
+        "size": 1,
+        "count": 1
+    },
     "questions": [
         {
             "id": 1010,

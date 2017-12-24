@@ -40,21 +40,21 @@
       </div>
       <ul class='list-group list-group-flush'>
         <li class='list-group-item' *ngFor="let option of question.options">
-          <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" />
-          <label [attr.for]="option.id">
+          <input id="{{question.id+''+option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" />
+          <label [attr.for]="question.id+''+option.id">
             <span [innerHTML]="option.name"></span>
           </label>
         </li>
       </ul>
-      <div class="footer">{{question.hint}}</div>
+      <div class="footer" *ngIf='question.hint'><p [innerHTML]='question.hint'></p> </div>
     </div>
 
     <hr />
     <div class="text-sm-center">
-      <button class="btn btn-default btn-sm" *ngIf="config.allowBack" (click)="goTo(0);">First</button>
-      <button class="btn btn-default btn-sm" *ngIf="config.allowBack" (click)="goTo(pager.index - 1);">Prev</button>
-      <button class="btn btn-primary btn-sm" (click)="goTo(pager.index + pager.size);">Next</button>
-      <button class="btn btn-default btn-sm" *ngIf="config.allowBack" (click)="goTo(pager.count - 1);">Last</button>
+      <button class="btn btn-default btn-sm" [disabled]='pager.index == 0' *ngIf="config.allowBack" (click)="goTo(0);">First</button>
+      <button class="btn btn-default btn-sm" [disabled]='pager.index - pager.size < 0' *ngIf="config.allowBack" (click)="goTo(pager.index - pager.size);">Prev</button>
+      <button class="btn btn-primary btn-sm" [disabled]='pager.index + pager.size >= pager.count' (click)="goTo(pager.index + pager.size);">Next</button>
+      <button class="btn btn-default btn-sm" [disabled]='pager.index + pager.size >= pager.count' *ngIf="config.allowBack" (click)="goTo(pager.count - pager.size);">Last</button>
       <!-- <pagination *ngIf="config.showPager" direction-links="false" total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></pagination> -->
     </div>
   </div>
@@ -92,8 +92,8 @@
   </div>
   <hr />
   <div *ngIf="mode!='result'">
-    <button class="btn btn-default" (click)="mode = 'quiz'">Quiz</button>
-    <button class="btn btn-default" (click)="mode = 'review'">Review</button>
-    <button class="btn btn-default" (click)="onSubmit();">Submit Quiz</button>
+    <button class="btn btn-primary" (click)="mode = 'quiz'">Quiz</button>
+    <button class="btn btn-warning" (click)="mode = 'review'">Review</button>
+    <button class="btn btn-success" (click)="onSubmit();">Submit Quiz</button>
   </div>
 </div>
