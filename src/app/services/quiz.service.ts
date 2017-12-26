@@ -15,7 +15,7 @@ export class QuizService {
 
   getAll() {
     return [
-      { id: 'data/aws1.json', name: 'AWS' },
+      { id: 'data/aws.json', name: 'AWS' },
       { id: 'http://localhost:3000/aws', name: 'AWS Live' },
       { id: 'data/aspnet.json', name: 'aspnet' }
     ];

@@ -8,20 +8,23 @@ import { QuizComponent } from './quiz/quiz.component';
 import { FilterPipe } from './filter/FilterPipe';
 import { QuizEntryComponent } from './quiz-entry/quiz-entry.component';
 
+import { SimpleTimer } from 'ng2-simple-timer';
+import { ClockTimerComponent } from './clock-timer/clock-timer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuizComponent,
     FilterPipe,
-    QuizEntryComponent
+    QuizEntryComponent,
+    ClockTimerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [SimpleTimer],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
